@@ -1,0 +1,10 @@
+{
+	"Leads": {
+		"Leaders": "Лиды",
+		"ContactLeads": "Связь с лидами",
+		"Contacts": "Контакты",
+		"Leader": "ID",
+		"Phone": "Номер телефона",
+		"Hostname": "Откуда"
+	}
+}

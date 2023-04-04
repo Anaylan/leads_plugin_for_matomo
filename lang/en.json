@@ -1,0 +1,10 @@
+{
+	"Leads": {
+		"Leaders": "Leaders",
+		"ContactLeads": "Contact Leads",
+		"Contacts": "Contacts",
+		"Leader": "ID",
+		"Phone": "Phone",
+		"Hostname": "Hostname"
+	}
+}
