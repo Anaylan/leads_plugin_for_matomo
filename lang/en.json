@@ -3,8 +3,13 @@
 		"Leaders": "Leaders",
 		"ContactLeads": "Contact Leads",
 		"Contacts": "Contacts",
-		"Leader": "ID",
+		"LeaderName": "Name",
 		"Phone": "Phone",
-		"Hostname": "Hostname"
+		"Hostname": "Hostname",
+		"SettingMailTitle": "Email for leads",
+		"SettingMailDescription": "You must specify the email where the leads will come",
+		"PhoneField": "phone",
+		"HostnameField": "hostname",
+		"CityField": "city"
 	}
 }

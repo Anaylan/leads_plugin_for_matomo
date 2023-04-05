@@ -3,8 +3,13 @@
 		"Leaders": "Лиды",
 		"ContactLeads": "Связь с лидами",
 		"Contacts": "Контакты",
-		"Leader": "ID",
+		"LeaderName": "Имя",
 		"Phone": "Номер телефона",
-		"Hostname": "Откуда"
+		"Hostname": "Откуда",
+		"SettingMailTitle": "Адрес 'эл-почты для лидов",
+		"SettingMailDescription": "Вы должны указать адрес эл-почты, куда будут приходить лиды",
+		"PhoneField": "телефон",
+		"HostnameField": "сайт",
+		"CityField": "город"
 	}
 }

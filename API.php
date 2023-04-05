@@ -153,7 +153,7 @@ class API extends \Piwik\Plugin\API
 
                 $table->addRow($rn);
             } catch (\Throwable $th) {
-                throw $th;
+                // throw $th;
             }
         }
         // $table->addRowFromArray(array(Row::COLUMNS => array('phone' => 5)));
@@ -165,11 +165,9 @@ class API extends \Piwik\Plugin\API
     {
         // $login = Piwik::getCurrentUserLogin();
 
-        $city = 'тест';
-
         $leadData = array(
             "date" => Date::now(),
-            "city" => $city,
+            "city" => $data['city'],
             "name" => $data['name'],
             "phone" => $data['phone'],
             "href" => '#'

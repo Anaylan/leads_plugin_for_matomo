@@ -24,7 +24,7 @@ class GetLeaders extends Base
     {
         parent::init();
 
-        $this->name          = Piwik::translate('Leaders');
+        $this->name          = Piwik::translate('Leads_Leaders');
         $this->dimension     = new Leader();
         $this->documentation = Piwik::translate('');
         // This defines in which order your report appears in the mobile app, in the menu and in the list of widgets
@@ -60,7 +60,13 @@ class GetLeaders extends Base
     public function configureView(ViewDataTable $view)
     {
         if (!empty($this->dimension)) {
-            $view->config->addTranslations(array('label' => $this->dimension->getName()));
+            $view->config->addTranslations(
+                array(
+                    'label' => $this->dimension->getName(),
+                    'phone' => Piwik::translate("Leads_PhoneField"),
+                    'hostname' => Piwik::translate("Leads_HostnameField"),
+                    'city' => Piwik::translate("Leads_CityField"),
+                ));
         }
 
         // $view->config->show_search = false;

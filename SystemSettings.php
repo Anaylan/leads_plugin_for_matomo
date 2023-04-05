@@ -12,6 +12,7 @@ use Piwik\Settings\Setting;
 use Piwik\Settings\FieldConfig;
 use Piwik\Validators\NotEmpty;
 use Piwik\Validators\Email;
+use Piwik\Piwik;
 /**
  * Defines Settings for Leads.
  *
@@ -35,8 +36,8 @@ class SystemSettings extends \Piwik\Settings\Plugin\SystemSettings
     private function createLeadsEmailSetting()
     {
         return $this->makeSetting('leadsEmail', $default='', FieldConfig::TYPE_STRING, function (FieldConfig $field) {
-            $field->title = 'Email for leads';
-            $field->description = 'Нou must specify the email where the leads will come';
+            $field->title = Piwik::translate("Leads_SettingMailTitle");
+            $field->description = Piwik::translate("Leads_SettingMailDescription");
             $field->uiControlAttributes = array('type' => 'email');
             $field->validators[] = new NotEmpty(); 
             $field->validators[] = new Email();

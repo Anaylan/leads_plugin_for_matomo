@@ -19,13 +19,13 @@ use Piwik\Columns\Dimension;
  */
 class Leader extends Dimension
 {
-    protected $columnName = 'id';
-    protected $segmentName = 'id';
+    protected $columnName = 'name';
+    protected $segmentName = 'name';
 
     protected $type = self::TYPE_TEXT;
     /**
      * The name of the dimension which will be visible for instance in the UI of a related report and in the mobile app.
      * @return string
      */
-    protected $nameSingular = 'Leads_Leader';
+    protected $nameSingular = 'Leads_LeaderName';
 }
