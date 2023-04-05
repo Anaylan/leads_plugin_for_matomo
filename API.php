@@ -82,12 +82,15 @@ class API extends \Piwik\Plugin\API
     ) {
         $header = getallheaders();
 
+        $ip = IP::getIpFromHeader(); // your ip address here
+        $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+
         if ($this->email !== '') {
             if ($this->sendByMail(array(
                 'name' => Common::sanitizeInputValues($who),
                 'phone' => Common::sanitizeInputValues($phone),
                 'siteid' => $this->getSiteId($header['Origin'], $header['Referer']),
-                // 'city' => UserCountry.
+                'city' => $query['city']
             )) == true) {
                 $send = true;
             } else {
@@ -103,9 +106,6 @@ class API extends \Piwik\Plugin\API
 
         try {
             $dataTable = new DataTable();
-
-            $ip = IP::getIpFromHeader(); // your ip address here
-            $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
 
             $data = array(
                 'name' => Common::sanitizeInputValues($who),
