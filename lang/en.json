@@ -10,6 +10,7 @@
 		"SettingMailDescription": "You must specify the email where the leads will come",
 		"PhoneField": "phone",
 		"HostnameField": "hostname",
-		"CityField": "city"
+		"CityField": "city",
+		"LeadsMail": "Query to call"
 	}
 }

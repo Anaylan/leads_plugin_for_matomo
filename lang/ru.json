@@ -10,6 +10,7 @@
 		"SettingMailDescription": "Вы должны указать адрес эл-почты, куда будут приходить лиды",
 		"PhoneField": "телефон",
 		"HostnameField": "сайт",
-		"CityField": "город"
+		"CityField": "город",
+		"LeadsMail": "Заявка на звонок"
 	}
 }

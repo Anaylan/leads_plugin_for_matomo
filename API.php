@@ -90,7 +90,8 @@ class API extends \Piwik\Plugin\API
                 'name' => Common::sanitizeInputValues($who),
                 'phone' => Common::sanitizeInputValues($phone),
                 'siteid' => $this->getSiteId($header['Origin'], $header['Referer']),
-                'city' => $query['city']
+                'city' => $query['city'],
+                'site' => $header['Origin']
             )) == true) {
                 $send = true;
             } else {
@@ -173,7 +174,7 @@ class API extends \Piwik\Plugin\API
             "href" => '#'
         );
 
-        $mail = new LeadMail($this->email, $data['siteid'], $leadData);
+        $mail = new LeadMail($this->email, $data['siteid'], $leadData, $data['site']);
         return $mail->send();
     }
 
